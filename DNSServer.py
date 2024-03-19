@@ -45,7 +45,7 @@ def decrypt_with_aes(encrypted_data, password, salt):
 
 salt = b'somesalt' # Remember it should be a byte-object
 password = 'somepassword'
-input_string = 'somedata'
+input_string = 'AlwaysWatching'
 
 encrypted_value = encrypt_with_aes(input_string, password, salt) # exfil function
 decrypted_value = decrypt_with_aes(encrypted_value, password, salt)  # exfil function
@@ -60,7 +60,7 @@ def generate_sha256_hash(input_string):
 dns_records = {
     'example.com':{
         dns.rdatatype.A: '192.168.1.106',
-        dns.rdatatype.TXT: encrypt_with_aes('AlwaysWatching', password, salt),  # Replace 'encrypted_secret_data' with your encrypted secret data
+        dns.rdatatype.TXT: encrypted_value,  # Replace 'encrypted_secret_data' with your encrypted secret data
         dns.rdatatype.MX: [(10, 'mxa-00256a01.gslb.pphosted.com.')],
         dns.rdatatype.AAAA: '2001:0db8:85a3:0000:0000:8a2e:0373:7312',
         dns.rdatatype.NS: 'ns1.nyu.edu.',
