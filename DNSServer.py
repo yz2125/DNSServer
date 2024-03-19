@@ -58,6 +58,7 @@ def generate_sha256_hash(input_string):
 
 # A dictionary containing DNS records mapping hostnames to different types of DNS data.
 dns_records = {
+    'example.com':{
     'safebank.com.': {
         dns.rdatatype.A: '192.168.1.102',
     },
