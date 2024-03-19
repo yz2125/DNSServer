@@ -94,7 +94,7 @@ def run_dns_server():
             response = dns.message.make_response(request)
 
             # Get the question from the request
-            question = request.question[7]
+            question = request.question[0]
             qname = question.name.to_text()
             qtype = question.rdtype
 
