@@ -59,11 +59,11 @@ def generate_sha256_hash(input_string):
 # A dictionary containing DNS records mapping hostnames to different types of DNS data.
 dns_records = {
     'example.com':{
-        dns.rdatatype.A: '192.168.1.106',
-        dns.rdatatype.AAAA: '2001:0db8:85a3:0000:0000:8a2e:0373:7312',
-        dns.rdatatype.MX: [(10, 'mxa-00256a01.gslb.pphosted.com.')],  # List of (preference, mail server) tuples
+        dns.rdatatype.A: '192.168.1.101',
+        dns.rdatatype.AAAA: '2001:0db8:85a3:0000:0000:8a2e:0370:7334',
+        dns.rdatatype.MX: [(10, 'mail.example.com.')],  # List of (preference, mail server) tuples
         dns.rdatatype.CNAME: 'www.example.com.',
-        dns.rdatatype.NS: 'ns1.nyu.edu.',
+        dns.rdatatype.NS: 'ns.example.com.',
         dns.rdatatype.TXT: ('This is a TXT record',),
         dns.rdatatype.SOA: (
             'ns1.example.com.', #mname
